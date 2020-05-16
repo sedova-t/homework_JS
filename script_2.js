@@ -27,13 +27,13 @@ let a = 40;
 let b = 1;
 let c = 10;
 
-let max = (a > b) ? ((a > c) ? a : ((b > c) ? b : c)) : ((b > c) ? b : c);
-console.log(max);
+let min = (a < b) ? ((a < c) ? a : ((b < c) ? b : c)) : ((b < c) ? b : c);
+console.log(min);
 
 //________________________________
 
-let max2 = Math.max(a, b, c);
-console.log(max2);
+let min2 = Math.min(a, b, c);
+console.log(min2);
 
 
 //Задача 4
