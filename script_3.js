@@ -24,4 +24,24 @@ let index2 = arr1.indexOf(arrMin);
 arr1.splice(index2, 1);
 console.log(arr1);
 
+//Задача №5
 
+let arr2 = [2,7,4,-1,18,0];
+
+while (true){
+    if (arr2.length === 1) {
+        console.log(arr2[0]);
+        break;
+    }
+
+    let max1 = Math.max(...arr2);
+     arr2.splice(arr2.indexOf(max1), 1);
+
+    let max2 = Math.max(...arr2);
+    arr2.splice(arr2.indexOf(max2), 1);
+
+    let result = (max1 > max2)? max1 - max2: max2 - max1;
+    if (result !== 0) {
+        arr2.push(result);
+    }
+}
