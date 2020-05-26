@@ -11,9 +11,9 @@ function timer() {
     minutes.innerHTML = date.getMinutes();
     seconds.innerHTML = date.getSeconds();
 
-    hours.style.cssText = "display: inline-block; color: green; border: 1px solid black; width: 20px; padding: 5px";
-    minutes.style.cssText = "display: inline-block; color: orange; border: 1px solid black; width: 20px; padding: 5px";
-    seconds.style.cssText = "display: inline-block; color: blue; border: 1px solid black; width: 20px; padding: 5px";
+    hours.style.cssText = "display: inline-block; color: green; border: 1px solid black; width: 20px; padding: 25px; font-size: 20px;" ;
+    minutes.style.cssText = "display: inline-block; color: orange; border: 1px solid black; width: 20px; padding: 25px; font-size: 20px;";
+    seconds.style.cssText = "display: inline-block; color: blue; border: 1px solid black; width: 20px; padding: 25px; font-size: 20px;";
 }
 
 setInterval(function ()  {
@@ -26,11 +26,11 @@ setInterval(function ()  {
 function showProducts() {
 
     let arr = [
-        {photo: "", art: "asd-001", description: "Молоко пастеризованное - 1%", price: 150},
-        {photo: "", art: "asd-002", description: "Молоко пастеризованное - 2%", price: 90},
-        {photo: "", art: "asd-003", description: "Молоко пастеризованное - 2.5%", price: 130},
-        {photo: "", art: "asd-004", description: "Молоко пастеризованное - 3%", price: 75},
-        {photo: "", art: "asd-005", description: "Молоко пастеризованное - 3.4%", price: 199},
+        {photo: "photos/01.jpg", art: "asd-001", description: "Молоко пастеризованное - 1%", price: 150},
+        {photo: "photos/02.jpg", art: "asd-002", description: "Кефир домашний - <br> 2%", price: 90},
+        {photo: "photos/03.jpg", art: "asd-003", description: "Йогурт натуральный - 2.5%", price: 130},
+        {photo: "photos/04.jpg", art: "asd-004", description: "Сметана домашняя - <br> 3%", price: 75},
+        {photo: "photos/05.jpg", art: "asd-005", description: "Творог домашний - <br>5%", price: 199},
     ];
 
     // arr.sort((a,b) => b.price - a.price);
@@ -42,10 +42,10 @@ function showProducts() {
         let item = arr[i];
 
         html += `
-            <div>
+            <div class="milk">
                 <h1>${item.description}</h1>
                 <p>${item.art}</p>
-                <img src="${item.photo}" alt="${item.description}">
+                <img src="${item.photo}" class="photo" alt="${item.description}">
             </div>     
         `;
     }
