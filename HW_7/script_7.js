@@ -52,3 +52,33 @@ function showProducts() {
     milk.innerHTML = html;
 }
 showProducts();
+
+
+//Задание №3
+
+let index = 0;
+let reverse = false;
+
+function traffic() {
+    let sections = document.querySelectorAll(".round");
+    sections.forEach(function (element, count) {
+        if (count === index){
+            element.classList.add("active");
+        }else {
+            element.classList.remove("active");
+        }
+    })
+
+    if (index === sections.length - 1 || index === 0){
+            reverse = !reverse;
+        }
+    if (reverse === true){
+        index++;
+    }else {
+        index--;
+    }
+}
+setInterval(function () {
+    traffic()
+}, 2000);
+
