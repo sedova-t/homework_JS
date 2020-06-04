@@ -1,0 +1,53 @@
+*{
+    outline: none;
+}
+
+
+.container{
+    display: flex;
+}
+.block{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+}
+.block:hover{
+    cursor: pointer;
+}
+.first.active{
+    background-color: green;
+}
+.second.active{
+    background-color: darkviolet;
+}
+.third.active{
+    background-color: maroon;
+}
+
+
+.number{
+    border: 1px solid black;
+    padding: 60px 50px;
+    margin: 50px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+}
+.number:hover{
+    cursor: pointer;
+}
+.button{
+    border: 1px solid black;
+    margin: 20px 20px 20px 0;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: #59e259;
+    border: 1px solid #59e259;
+    transition: all 0.3s;
+}
